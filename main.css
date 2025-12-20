@@ -1,17 +1,19 @@
 @font-face {
-    font-family: "Hasklig";
-    src: url("Hasklig.otf") format("woff");
+    font-family: "JetBrainsMono";
+    src: url("JetBrainsMono-Medium.ttf") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 html {
     font-size: 25px;
-    font-family: "Hasklig", "Regular";
+    font-family: "JetBrainsMono", "Regular";
 }
 
 body {
-    background-color: #333;
+    background-image: url("darkLoadingTexture.png");
+    background-repeat: repeat;
+    background-size: 300px;
     color: white;
 }
 
@@ -19,27 +21,47 @@ p {
     margin: 0;
 }
 
+.overlay {
+    z-index: -1;
+    pointer-events: none;
+    position: fixed;
+    background-image: url("loadingvignette.png");
+    opacity: 0.5;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infobox-wrap {
+    filter: drop-shadow(0px 2px 6px #0f0f0f);
+}
+
 .infobox {
-    border-radius: 8px;
-    padding: 5px;
-    float: right;
-    width: 200px;
-    box-shadow: 0px 2px 6px #0f0f0f;
-    margin-top: 1em;
-    margin-right: 0px;
-    margin-bottom: 2em;
-    margin-left: 2em;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    padding: 12px;
+    width: 350px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 3px solid white;
+    font-size: 20px;
 }
 
 .infobox .heading {
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.4);
+    text-align: left;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 5px;
+    flex-grow: 0;
 }
 
 .infobox-group .heading {
@@ -61,17 +83,32 @@ p {
 }
 
 .topbar {
-    z-index: -999;
+    z-index: 999;
     position: fixed;
     width: 100%;
     height: 50px;
     top: 0;
     min-height: 50px;
-    background-color: rgb(40, 40, 40);
+    background-color: rgba(40, 40, 40, 0);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around;
     right: 0;
+    padding-top: 5px;
+}
+
+.topbar .title {
+    font-size: 35px;
+    position: relative;
+    left: 15px;
+}
+
+.topbar .right {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    bottom: 5px;
 }
 
 .topbar .button {
@@ -79,19 +116,27 @@ p {
     justify-content: center;
     text-align: center;
     font-size: 20px;
-    margin: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
     border-radius: 8px;
     padding: 8px;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: transform 0.15s ease-out;
+    background-color: rgba(0, 0, 0, 0);
+    transition: transform 0.15s ease-in-out;
 }
 
 .topbar .button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(5deg);
 }
 
+/*
+.topbar .button:active {
+    transform: scale(0.85);
+    transition-duration: 0.15s;
+}
+*/
+
 .topbar p {
-    text-shadow: 0 0 5px #000000;
+    /*text-shadow: 0 0 5px #000000;*/
     margin: 8px;
 }
 
