@@ -1,6 +1,6 @@
 @font-face {
     font-family: "JetBrainsMono";
-    src: url("/assets/fonts/JetBrainsMono-Medium.ttf") format("woff");
+    src: url("assets/fonts/JetBrainsMono-Medium.ttf") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-image: url("darkLoadingTexture.png");
+    background-image: url("assets/img/darkLoadingTexture.png");
     background-repeat: repeat;
     background-size: 300px;
     color: white;
@@ -40,7 +40,7 @@ p {
     z-index: -1;
     pointer-events: none;
     position: fixed;
-    background-image: url("loadingvignette.png");
+    background-image: url("assets/img/loadingvignette.png");
     opacity: 0.5;
     content: "";
     height: 100%;
