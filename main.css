@@ -193,6 +193,42 @@ p {
 }
 
 .blogholder {
+    padding: 5px;
+}
+
+article p {
+    margin: 10px;
+}
+
+.blogholder article {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid white;
+    border-radius: 2px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.blogholder h3 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.tag {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.date {
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+    padding: 5px;
 }
 
 .child:nth-child(1) {

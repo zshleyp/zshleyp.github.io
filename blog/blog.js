@@ -1,14 +1,28 @@
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
 let postNum = 1;
-window.addEventListener("load", loadPost());
+window.addEventListener("load", loadPost(postNum));
 
 async function loadPost() {
-  fetch("blog/blogs")
-    .then((r) => r.json())
-    .then((files) => {
-      files.forEach((file) => {
-        fetch(`blog/blogs/${file}`)
-          .then((r) => r.text())
-          .then((text) => console.log(text));
-      });
-    });
+  const result = await fetch(`blogs/${postNum}.md`);
+
+  if (!result.ok) {
+    console.log("no existe 😢");
+  } else {
+    const MD = await result.text();
+    console.log(marked.parse(MD));
+    renderHTML(MD);
+    postNum++;
+    loadPost(postNum);
+  }
+}
+
+function renderHTML(MD) {
+  const blogContainer = document.querySelector(".blogholder");
+  const createArticle = document.createElement("article");
+
+  const renderToHTML = marked.parse(MD);
+
+  createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
+  blogContainer.insertBefore(createArticle, blogContainer.firstChild);
 }
