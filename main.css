@@ -1,6 +1,6 @@
 @font-face {
     font-family: "JetBrainsMono";
-    src: url("JetBrainsMono-Medium.ttf") format("woff");
+    src: url("/assets/fonts/JetBrainsMono-Medium.ttf") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -19,6 +19,21 @@ body {
 
 p {
     margin: 0;
+}
+
+.link-style {
+    color: white;
+    text-decoration: none;
+}
+
+:any-link {
+    color: white;
+    text-decoration: none;
+}
+
+:any-link:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .overlay {
@@ -175,6 +190,9 @@ p {
     margin-top: -15px;
 
     animation: dance 0.35s ease infinite alternate;
+}
+
+.blogholder {
 }
 
 .child:nth-child(1) {
