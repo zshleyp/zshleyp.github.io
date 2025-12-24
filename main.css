@@ -21,6 +21,10 @@ p {
     margin: 0;
 }
 
+ul {
+    padding-inline-start: 30px;
+}
+
 .link-style {
     color: white;
     text-decoration: none;
@@ -29,11 +33,18 @@ p {
 :any-link {
     color: white;
     text-decoration: none;
+    transition: transform 0.15s ease-in-out;
+}
+
+.infobox-small :any-link {
+    display: flex;
+    width: fit-content;
 }
 
 :any-link:hover {
     color: white;
     text-decoration: underline;
+    transform: scale(1.1) rotate(5deg);
 }
 
 .overlay {
@@ -137,11 +148,6 @@ p {
     border-radius: 8px;
     padding: 8px;
     background-color: rgba(0, 0, 0, 0);
-    transition: transform 0.15s ease-in-out;
-}
-
-.topbar .button:hover {
-    transform: scale(1.1) rotate(5deg);
 }
 
 /*
@@ -169,7 +175,7 @@ p {
     width: 350px;
     position: absolute;
     left: 150px;
-    top: 400px;
+    top: 425px;
 }
 
 .reverse {
@@ -198,6 +204,20 @@ p {
 
 article p {
     margin: 10px;
+}
+
+.infobox-small {
+    border-radius: 2px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    display: block;
+    position: absolute;
+    padding: 12px;
+    width: 250px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 3px solid white;
+    font-size: 15px;
 }
 
 .blogholder article {
