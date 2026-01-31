@@ -283,3 +283,13 @@ article p {
         transform: translateY(-20px);
     }
 }
+
+@keyframes dance2 {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
