@@ -1,153 +1,154 @@
 @font-face {
-    font-family: "JetBrainsMono";
-    src: url("assets/fonts/JetBrainsMono-Medium.ttf") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "JetBrainsMono";
+  src: url("assets/fonts/JetBrainsMono-Medium.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
-    font-size: 25px;
-    font-family: "JetBrainsMono", "Regular";
+  /*animation: dance2 0.35s ease alternate;*/
+  font-size: 25px;
+  font-family: "JetBrainsMono", "Regular";
 }
 
 body {
-    background-image: url("assets/img/darkLoadingTexture.png");
-    background-repeat: repeat;
-    background-size: 300px;
-    color: white;
+  background-image: url("assets/img/darkLoadingTexture.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  color: white;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 ul {
-    padding-inline-start: 30px;
+  padding-inline-start: 30px;
 }
 
 .link-style {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 :any-link {
-    color: white;
-    text-decoration: none;
-    transition: transform 0.15s ease-in-out;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.15s ease-in-out;
 }
 
 .infobox-small :any-link {
-    display: flex;
-    width: fit-content;
+  display: flex;
+  width: fit-content;
 }
 
 :any-link:hover {
-    color: white;
-    text-decoration: underline;
-    transform: scale(1.1) rotate(5deg);
+  color: white;
+  text-decoration: underline;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .overlay {
-    z-index: -1;
-    pointer-events: none;
-    position: fixed;
-    background-image: url("assets/img/loadingvignette.png");
-    opacity: 0.5;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  position: fixed;
+  background-image: url("assets/img/loadingvignette.png");
+  opacity: 0.5;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .infobox-wrap {
-    filter: drop-shadow(0px 2px 6px #0f0f0f);
+  filter: drop-shadow(0px 2px 6px #0f0f0f);
 }
 
 .infobox {
-    border-radius: 2px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2.5px);
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 5%;
-    padding: 12px;
-    width: 350px;
-    margin: 10px;
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 3px solid white;
-    font-size: 20px;
+  border-radius: 2px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2.5px);
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  padding: 12px;
+  width: 350px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 3px solid white;
+  font-size: 20px;
 }
 
 .infobox .heading {
-    border-radius: 8px;
-    text-align: left;
-    font-size: 28px;
-    background-color: rgba(0, 0, 0, 0);
-    margin-bottom: 5px;
-    flex-grow: 0;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 5px;
+  flex-grow: 0;
 }
 
 .infobox-group .heading {
-    margin-top: 8px;
-    margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .infobox-datarow {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .infobox-datarow .data-heading {
-    display: inline-block;
-    margin: 5px;
-    vertical-align: middle;
-    font-weight: bold;
-    border-radius: 2px;
-    width: var(--infobox-heading-length, 72px);
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+  font-weight: bold;
+  border-radius: 2px;
+  width: var(--infobox-heading-length, 72px);
 }
 
 .topbar {
-    z-index: 999;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    min-height: 50px;
-    background-color: rgba(40, 40, 40, 0);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    right: 0;
-    padding-top: 5px;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  min-height: 50px;
+  background-color: rgba(40, 40, 40, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  right: 0;
+  padding-top: 5px;
 }
 
 .topbar .title {
-    font-size: 35px;
-    position: relative;
-    left: 15px;
+  font-size: 35px;
+  position: relative;
+  left: 15px;
 }
 
 .topbar .right {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    position: relative;
-    bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  bottom: 5px;
 }
 
 .topbar .button {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /*
@@ -158,138 +159,143 @@ ul {
 */
 
 .topbar p {
-    /*text-shadow: 0 0 5px #000000;*/
-    margin: 8px;
+  /*text-shadow: 0 0 5px #000000;*/
+  margin: 8px;
 }
 
 .topbar .button p {
-    margin: 0;
+  margin: 0;
 }
 
 .childholder {
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    align-items: center;
-    height: 150px;
-    flex-wrap: wrap;
-    width: 350px;
-    position: absolute;
-    left: 150px;
-    top: 425px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  height: 150px;
+  flex-wrap: wrap;
+  width: 350px;
+  position: absolute;
+  left: 150px;
+  top: 425px;
 }
 
 .reverse {
-    transform: scaleX(-1);
-    width: auto;
-    height: 100%;
+  transform: scaleX(-1);
+  width: auto;
+  height: 100%;
 }
 
 .child {
-    display: block;
-    /*aspect-ratio: 1 / 1;*/
-    height: 100%;
-    width: auto;
-    flex-grow: 0;
-    margin-left: -30px;
-    margin-right: -30px;
+  display: block;
+  /*aspect-ratio: 1 / 1;*/
+  height: 100%;
+  width: auto;
+  flex-grow: 0;
+  margin-left: -30px;
+  margin-right: -30px;
 
-    margin-top: -15px;
+  margin-top: -15px;
 
-    animation: dance 0.35s ease infinite alternate;
+  animation: dance 0.35s ease infinite alternate;
 }
 
 .blogholder {
-    padding: 5px;
+  padding: 5px;
 }
 
 article p {
-    margin: 10px;
+  margin: 10px;
 }
 
 .infobox-small {
-    border-radius: 2px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2.5px);
-    display: block;
-    position: absolute;
-    padding: 12px;
-    width: 250px;
-    margin: 10px;
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 3px solid white;
-    font-size: 15px;
+  border-radius: 2px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2.5px);
+  display: block;
+  position: absolute;
+  padding: 12px;
+  width: 250px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 3px solid white;
+  font-size: 15px;
 }
 
 .blogholder article {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2.5px);
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 2px solid white;
-    border-radius: 2px;
-    margin-top: 15px;
-    padding: 10px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2.5px);
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid white;
+  border-radius: 2px;
+  margin-top: 15px;
+  padding: 10px;
 }
 
 .blogholder h3 {
-    font-size: 25px;
-    font-weight: bolder;
-    margin: 0;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 0;
 }
 
 .tag {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-size: 15px;
-    padding: 5px;
-    border-radius: 2px;
-    margin: 0;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 0;
 }
 
 .date {
-    color: rgb(150, 150, 150);
-    font-size: 15px;
-    padding: 5px;
+  color: rgb(150, 150, 150);
+  font-size: 15px;
+  padding: 5px;
 }
 
 .child:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
+
 .child:nth-child(2) {
-    animation-delay: -0.1s;
+  animation-delay: -0.1s;
 }
+
 .child:nth-child(3) {
-    animation-delay: -0.2s;
+  animation-delay: -0.2s;
 }
+
 .child:nth-child(4) {
-    animation-delay: -0.3s;
+  animation-delay: -0.3s;
 }
+
 .child:nth-child(5) {
-    animation-delay: -0.4s;
+  animation-delay: -0.4s;
 }
 
 .child:nth-child(6) {
-    animation-delay: -0.5s;
+  animation-delay: -0.5s;
 }
+
 .child:nth-child(7) {
-    animation-delay: -0.6s;
+  animation-delay: -0.6s;
 }
 
 .child:nth-child(8) {
-    animation-delay: -0.7s;
+  animation-delay: -0.7s;
 }
 
 @keyframes dance {
-    100% {
-        transform: translateY(-20px);
-    }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes dance2 {
-    0% {
-        transform: rotate(-10deg);
-    }
+  0% {
+    transform: rotate(-10deg);
+  }
 
-    100% {
-        transform: rotate(10deg);
-    }
+  100% {
+    transform: rotate(10deg);
+  }
 }
