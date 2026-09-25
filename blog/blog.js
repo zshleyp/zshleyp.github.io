@@ -4,7 +4,7 @@ let postNum = 1;
 window.addEventListener("load", loadPost(postNum));
 
 async function loadPost() {
-  const result = await fetch(`blogs/${postNum}.md`);
+  const result = await fetch("blogs/" + `${postNum}`.padStart(3, "0") + ".md");
 
   if (!result.ok) {
     console.log("no existe 😢");
